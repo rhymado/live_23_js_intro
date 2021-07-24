@@ -55,8 +55,12 @@ const resultPersons = persons.map((person) => {
   };
   return newPerson;
 });
+const resultPersonImplicit = persons.map((person) => ({
+  ...person,
+  age: (Math.random() * 10 + 20).toFixed(2),
+}));
 
-// console.log(resultPersons);
+console.log(resultPersons, resultPersonImplicit);
 
 const arrOfPerson = [
   {
@@ -91,7 +95,10 @@ const filteredPerson = arrOfPerson.filter((person) => {
   if (person.gender === "Female" && person.age < 20) return true;
   return false;
 });
-// console.log(filteredPerson);
+const filteredPersonImplicit = arrOfPerson.filter(
+  (person) => person.gender === "Female" && person.age < 20
+);
+console.log(filteredPerson, filteredPersonImplicit);
 
 // array.push array.unshift
 // menambahkan elemen/s baru ke akhir/awal array
@@ -127,16 +134,16 @@ function addNumberByTwo(num) {
 
 // const resultArray = getAllElementAndModify([1, 3, 5, 7, 9]);
 const resultArray = getAllElementAndModify([1, 3, 5, 7, 9], addNumberByTwo);
-console.log(resultArray);
+// console.log(resultArray);
 
 function changeElementToHalu() {
   return "halu";
 }
 const resultArr = getAllElementAndModify([1, 3, 5, 7, 9], changeElementToHalu);
-console.log(resultArr);
+// console.log(resultArr);
 
 const anotherResult = getAllElementAndModify([1, 2, 3], (element) => {
   const result = element * 100;
   return result;
 });
-console.log(anotherResult);
+// console.log(anotherResult);

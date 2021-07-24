@@ -50,6 +50,15 @@ const multiplication = (a, b) => {
 const hasilPerkalian = multiplication(2, 5);
 // console.log(hasilPerkalian);
 
+// arrow function memiliki sifat implicit return
+// tidak membutuhkan kata kunci return
+// syarat hanya 1 baris
+// penulisannya dengan mengubah kurung kurawal menjadi
+// kurung biasa
+
+const division = (a, b) => a / b;
+console.log(division(6, 2));
+
 // saran untuk pengondisian didalam fungsi
 function printSegitiga(num) {
   //   if (typeof num === "number") {
@@ -91,11 +100,11 @@ const example = undefined;
 const bool = true;
 const isOdd = 3 % 2 !== 0; // tipe data boolean
 const isGreater = 4 > 5;
-console.log(typeof isGreater);
+// console.log(typeof isGreater);
 const stringExample = "Ini String";
 const numberExample = 0;
-console.log(typeof stringExample);
-console.log(typeof numberExample);
+// console.log(typeof stringExample);
+// console.log(typeof numberExample);
 
 if (stringExample) {
   console.log("String tidak kosong");
